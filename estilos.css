@@ -1,0 +1,121 @@
+/* estilos.css - Estilos do Flappy Bird */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #70c1ff 0%, #ffffff 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.tela-inicio, .tela-gameover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.9);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+}
+
+.tela-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cenario {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    background: linear-gradient(to top, #aeefff 0%, #e0f7fa 100%);
+    overflow: hidden;
+    border: 3px solid #0099cc;
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.passaro {
+    position: absolute;
+    left: 60px;
+    top: 200px;
+    width: 40px;
+    height: 40px;
+    background: url('https://i.imgur.com/sN1p3yE.png') center/cover no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+
+.cano {
+    position: absolute;
+    width: 60px;
+    background: linear-gradient(to bottom, #43a047 0%, #388e3c 100%);
+    border: 2px solid #2e7d32;
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+
+.cano.cano-superior {
+    top: 0;
+}
+
+.cano.cano-inferior {
+    bottom: 0;
+}
+
+.pontuacao {
+    font-size: 2rem;
+    color: #00796b;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.pontuacao-final {
+    font-size: 1.5rem;
+    color: #d84315;
+    font-weight: bold;
+}
+
+button {
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    background: #0099cc;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #007399;
+}
+
+@media (max-width: 500px) {
+    .cenario {
+        width: 98vw;
+        height: 60vw;
+        min-height: 300px;
+        max-width: 100vw;
+    }
+    .passaro {
+        width: 9vw;
+        height: 9vw;
+        min-width: 28px;
+        min-height: 28px;
+    }
+    .cano {
+        width: 14vw;
+        min-width: 32px;
+    }
+}

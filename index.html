@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="container-jogo">
+        <section class="tela-inicio" id="tela-inicio">
+            <h1>Flappy Bird</h1>
+            <button id="botao-iniciar">Iniciar Jogo</button>
+        </section>
+        <section class="tela-jogo" id="tela-jogo" style="display:none;">
+            <div class="pontuacao" id="pontuacao">0</div>
+            <div class="cenario" id="cenario">
+                <div class="passaro" id="passaro"></div>
+            </div>
+        </section>
+        <section class="tela-gameover" id="tela-gameover" style="display:none;">
+            <h2>Game Over</h2>
+            <div class="pontuacao-final" id="pontuacao-final"></div>
+            <button id="botao-reiniciar">Jogar Novamente</button>
+        </section>
+    </main>
+    <script src="jogo.js"></script>
+</body>
+</html>
